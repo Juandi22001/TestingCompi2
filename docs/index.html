@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   
+    <!-- GONT AWESOME-->
+   
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    	     <!-- importo index de la segunda consola-->
+	<script type="text/javascript" src="js/index2.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <button onclick="DescargarArchivo();" id="guardar" title="Guardar" class="btn btn-warning text-black-50"><i class="fa fa-folder" aria-hidden="true"></i> Guardar</button>
+     
+   <!-- <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>-->
+    <script type="text/javascript" src="website/app.js"></script>
+    <link rel="stylesheet" href="./website/style.css">
+    <script src="./codemirror/lib/codemirror.js"></script>
+    <link rel="stylesheet" href="./codemirror//lib//codemirror.css">
+    <link rel="stylesheet" href="./codemirror//theme//eclipse.css">
+    <script src="./codemirror/mode/clike/clike.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css//pablo.css" />
+    
+    <link rel="stylesheet" href="../js/codemirror//lib//codemirror.css">
+    <link rel="stylesheet" href="../js/codemirror//theme//dracula.css">
+    <link rel="stylesheet" href="./website/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="../jstree/dist//themes//default/style.min.css" />
+
+
+
+    <title>Proyecto2_201807335</title>
+</head>
+
+<body class="MIfondo">
+    <div class="contenedor">
+        <h1> Proyecto 2 201807335 </h1>
+        <div id="pestanas">
+            <ul id=lista>
+            </ul>
+        </div>
+
+        <body>
+            <div id="contenidopestanas">
+
+            </div>
+        </body>
+      
+        <button onclick="Analizar();" title="Analizar" id="btn6" class="btn btn-dark text-black">Analizar JAVA <i class="fa fa-youtube-square" aria-hidden="true"></i></button>
+        <button onclick="py();" title="Analizar" id="btn6" class="btn btn-dark text-black">Analizar Js <i class="fa fa-youtube-square" aria-hidden="true"></i></button>
+      
+        <button onclick="agregar();" title="Agregar" id="btn4" class="btn btn-outline-light text-black"> <i class="fa fa-plus-circle" aria-hidden="true"></i> Agregar Pestana</button>
+        <button onclick="quitar();" title="Quitar" id="btn5" class="btn btn-outline-light text-black">Quitar Pestana <i class="fa fa-xing" aria-hidden="true"></i></button>
+     
+
+        <div class="form-group purple-border">
+            <label for="exampleFormControlTextarea4">Traduccion</label>
+            <textarea class="form-control" id="textarea" rows="3"></textarea>
+          </div> 
+    </div>
+
+      
+      
+    <br>
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>E</title>
+        <style>
+        .demo { overflow:auto; border:1px solid silver; min-height:100px; }
+        </style>
+    </head>
+    <body>
+
+
+        <h1 style="color: azure;" id="tituloAST"></h1>
+     
+        <div id= "ats" >		
+        </div>
+
+ <div id="erroresConsola1">
+</div>
+
+  <h1 style="color: azure;" id="tituloAST2"></h1>
+ 
+  <div id= "ats2" >		
+  </div>
+
+<div id="erroresConsola2">
+</div>
+
+
+
+</body>
+</html>
+
+
+<script>
+function py(){
+    var Contenido=document.getElementById("textarea0");
+    var Contenido2=document.getElementById("textarea")
+    alert(Contenido.value)
+    console.log("--"+Contenido.value)
+
+    var Configuracion = {
+		
+		Cadena: Contenido.value		
+		
+	};
+/*
+    axios.get('../TokensJS')
+		
+		.then((response) => {
+			
+		//	DescargarArchivo(response.data, "ReporteDeTokensJS.pdf", "text/pdf");
+		  
+		})
+		.catch((error) => {
+			
+		
+			console.log("efe");
+			console.log(error);
+		
+        });	 
+*/
+let respuesta=""
+        axios.post('../AnalisisPY', Configuracion )
+		
+		.then((response) => {
+			
+	
+            console.log(response.data+"-----------")
+            Contenido2.value+=response.data
+
+		
+		})
+		.catch((error) => {
+			
+		
+			console.log("No se pudo realizar el analisis por lo tanto no se pudo hacer la")
+        });
+
+        Contenido2.value+="Traduccion a python "+"\n";       
+ 
+
+
+}
+function Analizar(){
+    var Contenido=document.getElementById("textarea0");
+    var Contenido2=document.getElementById("textarea")
+    alert(Contenido.value)
+    console.log("--"+Contenido.value)
+
+    var Configuracion = {
+		
+		Cadena: Contenido.value		
+		
+	};
+/*
+    axios.get('../TokensJS')
+		
+		.then((response) => {
+			
+		//	DescargarArchivo(response.data, "ReporteDeTokensJS.pdf", "text/pdf");
+		  
+		})
+		.catch((error) => {
+			
+		
+			console.log("efe");
+			console.log(error);
+		
+        });	 
+*/
+let respuesta=""
+        axios.post('../AnalisisJS', Configuracion )
+		
+		.then((response) => {
+			
+	
+            console.log(response.data+"-----------")
+            Contenido2.value+=response.data
+
+		
+		})
+		.catch((error) => {
+			
+		
+			console.log("No se pudo realizar el analisis por lo tanto no se pudo hacer la")
+        });
+
+        Contenido2.value+="Traduccion a JS "+"\n";       
+        
+}
+
+</script>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
