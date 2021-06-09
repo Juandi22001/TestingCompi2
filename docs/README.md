@@ -1,2 +1,1 @@
-# Levantar el servicio de go:
-- go run main.go
+Proyecto de pruebas para el curso de compiladores 2
