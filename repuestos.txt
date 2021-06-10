@@ -1,3 +1,0 @@
-Bujias#Toyota#Corolla#100#120
-Amortiguadores#Toyota#Corolla#120#100
-Frenos#Bugatti#Veyron#200#130
