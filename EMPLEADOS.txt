@@ -1,0 +1,3 @@
+Juan Quintero#Mecanico#JQ#1234
+Juan Alvarado#Administrador#JA#1234
+Pedro Ramirez#Mecanico#PR#1224

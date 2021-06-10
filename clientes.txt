@@ -1,0 +1,2 @@
+29982510#Fredy Salinas#Fred#1234#Oro#8580DGV,Bugatti,Veyron,C:\Users\JUAN DIEGO ALVARADO\Documents\NetBeansProjects\proyecto2\src\proyecto2\carro1.jpg;350ljk,Toyota,Corolla,C:\Users\JUAN DIEGO ALVARADO\Documents\NetBeansProjects\proyecto2\src\proyecto2\carro4.jpg
+29982511#Hugo Alvarado#H#1234#Normal#8580DGV,Bugatti,Veyron,C:\Users\JUAN DIEGO ALVARADO\Documents\NetBeansProjects\proyecto2\src\proyecto2\carro1.jpg;350ljk,Toyota,Corolla,C:\Users\JUAN DIEGO ALVARADO\Documents\NetBeansProjects\proyecto2\src\proyecto2\carro4.jpg
