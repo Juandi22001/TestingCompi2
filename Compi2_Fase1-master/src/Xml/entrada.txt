@@ -1,0 +1,13 @@
+<!--Students grades are uploaded by months-->
+<?xml version="1.0" encoding="UTF-8"?>
+<negocio>
+    <unica mundo="tierra"/>
+    <videojuego estado="nuevo">
+        <titulo>Dragón 2</titulo>
+        <desarrolladora>Level 5</desarrolladora>
+    </videojuego>
+    <videojuego estado="usado" hola="45">
+        <titulo>The Witcher 3</titulo>
+        <desarrolladora>CD Projekt Red</desarrolladora>
+   </videojuego>
+</negocio>a
